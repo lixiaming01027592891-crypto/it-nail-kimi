@@ -3,12 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 const works = [
-  { title: '極簡裸色', tag: '凝膠', alt: '極簡裸色凝膠美甲作品' },
-  { title: '花卉手繪', tag: '手繪', alt: '花卉手繪凝膠美甲作品' },
-  { title: '鏡面貓眼', tag: '貓眼', alt: '鏡面貓眼凝膠美甲作品' },
-  { title: '法式經典', tag: '法式', alt: '法式經典凝膠美甲作品' },
-  { title: '漸層暈染', tag: '漸層', alt: '漸層暈染凝膠美甲作品' },
-  { title: '幾何線條', tag: '設計', alt: '幾何線條凝膠美甲作品' },
+  { title: '極簡裸色', tag: '凝膠', image: '/images/gallery-nude-gel.jpg', alt: '極簡裸色凝膠美甲作品' },
+  { title: '花卉手繪', tag: '手繪', image: '/images/gallery-floral-art.jpg', alt: '花卉手繪凝膠美甲作品' },
+  { title: '鏡面貓眼', tag: '貓眼', image: '/images/gallery-cat-eye.jpg', alt: '鏡面貓眼凝膠美甲作品' },
+  { title: '法式經典', tag: '法式', image: '/images/gallery-french.jpg', alt: '法式經典凝膠美甲作品' },
+  { title: '漸層暈染', tag: '漸層', image: '/images/gallery-gradient.jpg', alt: '漸層暈染凝膠美甲作品' },
+  { title: '幾何線條', tag: '設計', image: '/images/gallery-presson.jpg', alt: '幾何線條穿戴甲設計作品' },
 ];
 ---
 <Layout title="作品集 | 伊特美甲精選美甲作品" description="伊特美甲作品集，包含台北中山區凝膠美甲、手繪花卉、貓眼、法式、漸層等多種風格。立即預約同款設計。">
@@ -22,12 +22,14 @@ const works = [
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         {works.map(work => (
-          <div class="aspect-square rounded-xl bg-it-secondary/30 flex flex-col items-center justify-center hover:shadow-md transition-shadow">
-            <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-3">
-              <span class="text-2xl" role="img" aria-label={work.alt}>💅</span>
+          <div class="group aspect-square rounded-xl bg-white overflow-hidden hover:shadow-md transition-shadow">
+            <div class="h-4/5 overflow-hidden">
+              <img src={work.image} alt={work.alt} loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
             </div>
-            <p class="font-medium text-it-dark">{work.title}</p>
-            <span class="text-xs text-it-text mt-1 px-2 py-0.5 bg-white rounded-full">{work.tag}</span>
+            <div class="p-3">
+              <p class="font-medium text-it-dark">{work.title}</p>
+              <span class="text-xs text-it-text mt-1 inline-flex px-2 py-0.5 bg-it-secondary/30 rounded-full">{work.tag}</span>
+            </div>
           </div>
         ))}
       </div>

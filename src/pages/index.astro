@@ -106,24 +106,28 @@ const services = [
     title: '凝膠美甲',
     desc: '專業光療凝膠技術，色彩飽和持久。台北中山區美甲推薦首選。',
     href: '/services/gel-nails',
+    image: '/images/service-gel.jpg',
     keywords: '凝膠美甲,光療美甲,台北美甲,中山區美甲'
   },
   {
     title: '光療延甲',
     desc: '硬式凝膠延甲技術，改善甲型問題，打造完美長度與弧度。',
     href: '/services/gel-extension',
+    image: '/images/service-gel.jpg',
     keywords: '光療延甲,凝膠延甲,指甲矯正,台北延甲'
   },
   {
     title: '手足保養',
     desc: '深層滋養與角質護理，讓雙手雙足恢復細緻柔嫩。',
     href: '/services/manicure-pedicure',
+    image: '/images/service-care.jpg',
     keywords: '手足保養,手部護理,足部護理,台北SPA'
   },
   {
     title: '穿戴甲訂製',
     desc: '量身訂製的時尚穿戴甲，隨時變換風格，無需等待施作時間。',
     href: '/services/press-on-nails',
+    image: '/images/service-presson.jpg',
     keywords: '穿戴甲,訂製穿戴甲,台北穿戴甲,假指甲'
   }
 ];
@@ -171,11 +175,8 @@ const services = [
         </div>
         
         <div class="hidden lg:block relative">
-          <div class="aspect-[4/5] rounded-3xl bg-gradient-to-br from-it-secondary/40 to-it-blush/30 flex items-center justify-center">
-            <div class="text-center p-8">
-              <p class="text-it-text/60 text-sm mb-2">Hero Image Placeholder</p>
-              <p class="text-it-text/40 text-xs">精緻凝膠美甲示意圖</p>
-            </div>
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+            <img src="/images/hero-nail-studio.jpg" alt="精緻凝膠美甲工作室形象照" class="h-full w-full object-cover" />
           </div>
           <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
             <p class="text-xs text-it-text/60">本日預約</p>
@@ -216,15 +217,20 @@ const services = [
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map(service => (
-            <a href={service.href} class="group block bg-it-light rounded-2xl p-6 hover:shadow-lg transition-all border border-transparent hover:border-it-secondary/30">
-              <div class="w-12 h-12 rounded-xl bg-it-secondary/30 flex items-center justify-center mb-4 group-hover:bg-it-cta/10 transition-colors">
-                <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            <a href={service.href} class="group block overflow-hidden bg-it-light rounded-2xl hover:shadow-lg transition-all border border-transparent hover:border-it-secondary/30">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src={service.image} alt={`${service.title}服務示意`} loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <h3 class="text-lg font-bold text-it-dark mb-2">{service.title}</h3>
-              <p class="text-sm text-it-text leading-relaxed">{service.desc}</p>
-              <div class="mt-4 flex items-center text-it-cta text-sm font-medium">
-                <span>了解詳情</span>
-                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              <div class="p-6">
+                <div class="w-12 h-12 rounded-xl bg-it-secondary/30 flex items-center justify-center mb-4 group-hover:bg-it-cta/10 transition-colors">
+                  <svg class="w-6 h-6 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-it-dark mb-2">{service.title}</h3>
+                <p class="text-sm text-it-text leading-relaxed">{service.desc}</p>
+                <div class="mt-4 flex items-center text-it-cta text-sm font-medium">
+                  <span>了解詳情</span>
+                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
               </div>
             </a>
           ))}
