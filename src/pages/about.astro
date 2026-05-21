@@ -44,32 +44,40 @@ import Footer from '../components/Footer.astro';
       <section class="mb-16">
         <h2 class="text-2xl md:text-3xl font-serif font-bold text-it-dark mb-8 text-center">兩間店，同一份用心</h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-md transition-shadow">
-            <h3 class="font-bold text-it-dark mb-3 flex items-center gap-2 text-lg">
-              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-              景美店
-            </h3>
-            <p class="text-sm text-it-text leading-relaxed">台北市文山區 <strong>景興路</strong>，鄰近 <strong>景美捷運站</strong>（步行約 7 分鐘），周邊有景美翰星百貨等生活商圈。木質色調空間，質感放鬆。</p>
+          <!-- 景美店 -->
+          <a href="https://www.google.com/maps/search/?api=1&query=台北市文山區景興路151號2樓" target="_blank" rel="noopener noreferrer" class="group block bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg hover:border-it-cta/30 hover:-translate-y-0.5 transition-all duration-300">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-bold text-it-dark flex items-center gap-2 text-lg">
+                <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                景美店
+              </h3>
+              <svg class="w-5 h-5 text-it-secondary group-hover:text-it-cta transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </div>
+            <p class="text-sm text-it-text leading-relaxed">台北市文山區 <strong class="text-it-dark">景興路151號2樓</strong>，鄰近 <strong class="text-it-dark">景美捷運站</strong>（步行約 5–7 分鐘）。木質色調空間，質感放鬆。</p>
             <div class="mt-4 flex items-center gap-4 text-sm">
               <span class="text-it-text flex items-center gap-1">
-                <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                02-2934-9297
+                <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                點擊查看 Google Maps
               </span>
             </div>
-          </div>
-          <div class="bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-md transition-shadow">
-            <h3 class="font-bold text-it-dark mb-3 flex items-center gap-2 text-lg">
-              <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-              新店店
-            </h3>
-            <p class="text-sm text-it-text leading-relaxed">新店 <strong>眷村巷弄內</strong>，鄰近 <strong>新店區公所捷運站 1 號出口</strong>。空間寬敞寧靜、無壓迫感，鬧中取靜。</p>
+          </a>
+          <!-- 新店店 -->
+          <a href="https://www.google.com/maps/search/?api=1&query=新北市新店區三民路35巷30號" target="_blank" rel="noopener noreferrer" class="group block bg-it-light rounded-2xl p-8 border border-it-secondary/20 hover:shadow-lg hover:border-it-cta/30 hover:-translate-y-0.5 transition-all duration-300">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-bold text-it-dark flex items-center gap-2 text-lg">
+                <svg class="w-5 h-5 text-it-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                新店店
+              </h3>
+              <svg class="w-5 h-5 text-it-secondary group-hover:text-it-cta transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </div>
+            <p class="text-sm text-it-text leading-relaxed">新北市新店區 <strong class="text-it-dark">三民路35巷30號</strong>，鄰近 <strong class="text-it-dark">新店區公所捷運站 1 號出口</strong>（步行約 5–8 分鐘）。空間寬敞寧靜，鬧中取靜。</p>
             <div class="mt-4 flex items-center gap-4 text-sm">
               <span class="text-it-text flex items-center gap-1">
-                <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                02-8665-6288
+                <svg class="w-4 h-4 text-it-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                點擊查看 Google Maps
               </span>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
