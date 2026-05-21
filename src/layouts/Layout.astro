@@ -21,6 +21,18 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8" />
+  <style is:inline>
+    :root {
+      --z-base: 0;
+      --z-raised: 10;
+      --z-sticky: 20;
+      --z-dropdown: 30;
+      --z-overlay: 40;
+      --z-modal: 50;
+      --z-mobile-menu: 60;
+      --z-toast: 70;
+    }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
@@ -45,7 +57,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
   )}
   <slot name="head" />
 </head>
-<body class="bg-it-primary text-it-text font-sans antialiased">
+<body class="bg-it-primary text-it-text font-sans antialiased pt-16 lg:pt-20">
   <slot />
 </body>
 </html>
